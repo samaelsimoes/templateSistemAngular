@@ -1,0 +1,87 @@
+/* Garante que o HTML e o body ocupem 100% da altura */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Configura a imagem de fundo para cobrir toda a área */
+.background {
+  background-image: url('../../../assets/img/agroManager.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa de login */
+.login-box {
+  width: 400px;
+  padding: 40px;
+  background: linear-gradient(to bottom, rgba(3, 121, 3, 0.54), rgba(19, 139, 19, 0.79), rgba(33, 171, 33, 0.68));  
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+/* Estilo do título */
+.login-box h2 {
+  margin: 0 0 30px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Estilo dos campos de formulário */
+.login-box .form-group {
+  margin-bottom: 20px;
+}
+
+.login-box .form-group label {
+  color: #fff;
+}
+
+.login-box .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+}
+
+.login-box .form-group input:focus {
+  outline: none;
+}
+
+/* Estilo do botão */
+.login-box button {
+  width: 100%;
+}
+
+/* Links no formulário */
+.login-box .text-center a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-box .text-center a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo do modal de carregamento */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-border {
+  margin-top: 10px;
+}
+
+.custom-modal .modal-dialog {
+  max-width: 80%; // Ajuste a largura máxima conforme necessário
+  width: 80%; // Ajuste a largura do modal conforme necessário
+}

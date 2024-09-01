@@ -1,0 +1,67 @@
+<form [formGroup]="registroForm">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="person_name">Nome Completo</label>
+                <input id="person_name" class="form-control" placeholder="Nome Completo" formControlName="person_name">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="user_name">Login</label>
+                <input id="user_name" class="form-control" placeholder="Login" formControlName="user_name">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" class="form-control" placeholder="Email" formControlName="email">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="phone_number">Telefone</label>
+                <input id="phone_number" class="form-control" placeholder="Telefone" formControlName="phone_number">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input id="cpf" class="form-control" placeholder="CPF" formControlName="cpf">
+                <small class="form-text text-danger" *ngIf="registroForm.get('cpf')?.hasError('pattern')">
+                    O CPF deve estar no formato XXX.XXX.XXX-XX
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input id="password" type="password" class="form-control" placeholder="Senha" formControlName="password">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="confirm_password">Confirmar Senha</label>
+                <input id="confirm_password" type="password" class="form-control" placeholder="Confirmar Senha" formControlName="confirm_password">
+                <small class="form-text text-danger" *ngIf="registroForm.hasError('mismatch')">
+                    As senhas não correspondem
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-right">
+            <button class="btn btn-primary" (click)="registrar()" [disabled]="!registroForm.valid" type="button">Registrar</button>
+        </div>
+    </div>
+</form>

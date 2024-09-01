@@ -1,0 +1,14 @@
+.right-align-button {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.style-button-add-user {
+    background: linear-gradient(to bottom, rgba(3, 121, 3, 0.54), rgba(19, 139, 19, 0.79), rgba(33, 171, 33, 0.68));
+    color: #fff;
+    transition: background 0.3s; 
+}
+
+.style-button-add-user:hover {
+    background: linear-gradient(to bottom, rgba(33, 171, 33, 0.989), rgb(11, 127, 11), rgb(5, 151, 5));
+}

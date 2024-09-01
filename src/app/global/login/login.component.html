@@ -1,0 +1,44 @@
+<!-- Container with background image -->
+<div class="background">
+  <div class="container-fluid h-100 d-flex justify-content-center align-items-center">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="user_name">User ou E-mail</label>
+          <input id="user_name" type="text" class="form-control" formControlName="user_name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input id="password" type="password" class="form-control" formControlName="password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.valid">
+          Entrar
+        </button>
+
+        <div class="text-center mt-3">
+          <a (click)="openRegisterUser()">Novo acesso</a>
+          <a  class="d-block mt-2">Esqueci a senha</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for loading -->
+  <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <div class="loading-container">
+            <span>Carregando... </span>
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
